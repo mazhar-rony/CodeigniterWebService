@@ -1,1 +1,1 @@
-This is a simple web service created with codeigniter framework.
+This is a simple REST Full web service created with codeigniter framework.
