@@ -107,6 +107,7 @@ class Users extends REST_Controller {
     public function user_put()
     {
         $userData = array();
+
         $id = $this->put('id');
         
         $userData['first_name'] = $this->put('first_name');
@@ -147,7 +148,7 @@ class Users extends REST_Controller {
         // $this->db->delete('items', array('id'=>$id));
        
         // $this->response(['Item deleted successfully.'], REST_Controller::HTTP_OK);
-
+        
         if($id)
         {
             $delete = $this->users_model->delete($id);
@@ -168,7 +169,7 @@ class Users extends REST_Controller {
         {
             $this->response([
                 'status' => FALSE,
-                'message' => 'Nouser were found.'
+                'message' => 'No user were found.'
             ], REST_Controller::HTTP_NOT_FOUND);
         }
     }
